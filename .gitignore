@@ -1,0 +1,16 @@
+.env
+.env.*
+
+
+build/
+cmake-build*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+
+*.o
+*.out
+parity-circle
+
+
+.DS_Store
