@@ -11,19 +11,17 @@ static bool dfs(
 ) {
     int n = g.indexTeam.size();
 
-    // Base case: we used all nodes
     if (depth == n) {
-        // Check if there's an edge back to start
+    
         for (const auto& e : g.edges[current]) {
             if (e.to == start) {
-                path.push_back(start); // complete the cycle
+                path.push_back(start);
                 return true;
             }
         }
         return false;
     }
 
-    // Try all outgoing edges
     for (const auto& e : g.edges[current]) {
         int next = e.to;
 
@@ -35,7 +33,6 @@ static bool dfs(
                 return true;
             }
 
-            // backtrack
             used[next] = false;
             path.pop_back();
         }
