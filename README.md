@@ -36,13 +36,13 @@ Let $G$ be a finite and simple graph with $N\ge3$ vertices we denote with $deg$ 
 
 If $deg$ $v$ $+$ $deg$ $w$ $\ge n$ for every pair of ditinct non-adjacent verices $v$ and $w$ of $G$ then $G$ contains a Hamiltonian cycle
 
-Since our graph representing results of a sports league is directed we cannot directly apply Ore's law but instead Woodwall's (1972) version of Ore's theorem which can be applied to directed graphs and states:
+Since our graph representing results of a sports league is directed we cannot directly apply Ore's law but instead Woodall's[^1] version of Ore's theorem which can be applied to directed graphs and states:
 
 If in a directed graph $G$ with $n$ vertices for every pair of vertices $u$ and $v$ there is either an edge from $u$ to $v$ or $out$ $deg$ $u$ $+$ $in$ $deg$ $v$ $\ge$ $n$, $G$ contains a directed Hamiltonian cycle.
 
 Eventhough this theorem could lead to a much faster worst case scenario algorithm it cannot be used for our graph since the graphs representing outcomes of matches in a football league rarely fulfill the condition. It's rare that the sum of wins of the worst team in a league ($out$ $deg$ $u$) and loses of the best team in a league ($in$ $deg$ $v$) exceeds total number of teams in a league. 
 
-In the last 15 seasons of the English Premier League there were multiple pairs of teams that didn't fulfill the condition needed to apply Wodall's theorem every year, but it's important to note that this theorem may be applicable in other sports where teams play more game and where the game cannot finish in a draw (e.g. basketball).
+In the last 15 seasons of the English Premier League there were multiple pairs of teams that didn't fulfill the condition needed to apply Wodall's theorem every year, but it's important to note that this theorem may be applicable in other sports where teams play more games and where the game cannot finish in a draw (e.g. basketball).
 
 ## About
 
@@ -92,3 +92,5 @@ make
 ```sh
 ./parity-circle
 ```
+
+[^1]: Woodall, D. R. (1972), "Sufficient conditions for circuits in graphs", Proceedings of the London Mathematical Society, Third Series, 24: 739–755
